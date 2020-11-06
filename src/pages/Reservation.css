@@ -1,7 +1,8 @@
 .reservation {
     width: 90%;
     height: 90%;
-    margin: auto;
+    margin-top: 30px;
+    margin-left: 90px;
 }
 
 .button {

@@ -14,6 +14,8 @@ import { ellipse, square, triangle } from 'ionicons/icons';
 import Landingpage from './pages/Landingpage';
 import Listings from './pages/Listings';
 import Reservation from './pages/Reservation';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import { Menu } from './components/Menu';
 
 /* Core CSS required for Ionic components to work properly */
@@ -44,9 +46,11 @@ const App: React.FC = () => (
           <Route path="/" component={Landingpage} exact={true} />
           <Route path="/listings" component={Listings} exact={true} />
           <Route path="/reserve" component={Reservation} />
+          <Route path="/about" component={About}/>
+          <Route path="/contact" component={Contact}/>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+        <IonTabBar slot="bottom" color="header">
+          <IonTabButton tab="about" href="/about">
             <IonIcon icon={triangle} />
             <IonLabel>About Us</IonLabel>
           </IonTabButton>
@@ -54,7 +58,7 @@ const App: React.FC = () => (
             <IonIcon icon={ellipse} />
             <IonLabel>FAQ</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
+          <IonTabButton tab="contact" href="/contact">
             <IonIcon icon={square} />
             <IonLabel>Contact Us </IonLabel>
           </IonTabButton>

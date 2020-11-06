@@ -9,7 +9,7 @@ const Landingpage: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar color = 'header' >
-          <IonThumbnail class="thumnail" >
+          <IonThumbnail class="thumbnail" >
             <IonImg src = {"./assets/img/logo.png"}></IonImg>
           </IonThumbnail>
           <IonTitle class = 'title'>Shelter.Me</IonTitle>
