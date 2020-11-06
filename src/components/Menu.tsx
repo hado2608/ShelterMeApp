@@ -14,12 +14,12 @@ import React from "react";
 import './Menu.css';
 export const Menu = () => {
     return (
-        <IonMenu side="start" contentId ="main" >
+        <IonMenu side="start" contentId ="main">
             <IonHeader>
                 <IonToolbar color="header">
                     <IonTitle> MENU </IonTitle>
                 </IonToolbar>
-            </IonHeader >
+            </IonHeader>
             <IonContent color = "thisapp">
                 <IonList>
                     <IonMenuToggle auto-hide ="false" color = "thisapp">

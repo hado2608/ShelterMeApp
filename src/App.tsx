@@ -13,7 +13,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Landingpage from './pages/Landingpage';
 import Listings from './pages/Listings';
-import Tab3 from './pages/Tab3';
+import Reservation from './pages/Reservation';
 import { Menu } from './components/Menu';
 
 /* Core CSS required for Ionic components to work properly */
@@ -43,7 +43,7 @@ const App: React.FC = () => (
         <IonRouterOutlet id="main">
           <Route path="/" component={Landingpage} exact={true} />
           <Route path="/listings" component={Listings} exact={true} />
-          <Route path="/tab3" component={Tab3} />
+          <Route path="/reserve" component={Reservation} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">

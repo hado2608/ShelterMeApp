@@ -1,21 +1,23 @@
 import React from 'react';
-import { IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonIcon, IonImg, IonItem, IonLabel, IonList, IonListHeader, IonMenuButton, IonPage, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
 import './Listings.css';
-import { wifi } from 'ionicons/icons';
 
 const Listings: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader class = "title">
-        <IonToolbar color = "header">
+      <IonHeader>
+        <IonToolbar color = 'header'>
+          <IonThumbnail class="thumnail">
+            <IonImg src = {"./assets/img/logo.png"}></IonImg>
+          </IonThumbnail>
+          <IonTitle class = 'title' >Shelter.Me</IonTitle>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Shelter.Me</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen color= "thisapp">
-          <IonCard color = "dark" class="ion-card" className="ion-activated" href="#">
+          <IonCard color = "dark" class="ion-card" className="ion-activated" href="./reserve">
             <IonCardHeader>
               <IonCardSubtitle>#1</IonCardSubtitle>
               <IonCardTitle>Dorothy Day Center</IonCardTitle>

@@ -13,7 +13,10 @@
   }
 
 .title {
-    margin-left: 0px;
+    padding: 15px;
+    padding-left: 10px;
+    margin-top: -50px;
+    margin-left: 50px;
     color: white;
     font: Montserrat;
 }
@@ -57,4 +60,20 @@
     --ion-color-tint: var(--ion-color-header-tint);
   }
   
-  
+:root {
+  --ion-color-thisappblue: #79acb9;
+  --ion-color-thisappblue-rgb: 121,172,185;
+  --ion-color-thisappblue-contrast: #000000;
+  --ion-color-thisappblue-contrast-rgb: 0,0,0;
+  --ion-color-thisappblue-shade: #6a97a3;
+  --ion-color-thisappblue-tint: #86b4c0;
+}
+
+.ion-color-thisappblue {
+  --ion-color-base: var(--ion-color-thisappblue);
+  --ion-color-base-rgb: var(--ion-color-thisappblue-rgb);
+  --ion-color-contrast: var(--ion-color-thisappblue-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-thisappblue-contrast-rgb);
+  --ion-color-shade: var(--ion-color-thisappblue-shade);
+  --ion-color-tint: var(--ion-color-thisappblue-tint);
+}
