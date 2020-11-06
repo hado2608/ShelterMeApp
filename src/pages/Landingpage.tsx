@@ -1,0 +1,35 @@
+import React, { useState } from 'react';
+import { IonButton, IonButtons, IonContent, IonHeader, IonImg, IonMenuButton, IonPage, IonSearchbar, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
+import ExploreContainer from '../components/ExploreContainer';
+import './Landingpage.css';
+
+const Landingpage: React.FC = () => {
+  const [searchText, setSearchText] = useState('');
+  return (
+    <IonPage>
+      <IonHeader class = 'title'>
+        <IonToolbar color = 'header'>
+          <IonThumbnail class="thumnail">
+            <IonImg src = {"./assets/img/logo.png"}></IonImg>
+          </IonThumbnail>
+          <IonTitle class = 'title' >Shelter.Me</IonTitle>
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen color= "thisapp">
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">Tab 1</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <ExploreContainer name="Enter your zip code:" />
+        <IonSearchbar color="white" class = 'center' value={searchText} onIonChange={e => setSearchText(e.detail.value!)} inputmode="numeric"></IonSearchbar>
+        <IonButton id = "search_button" color = "#79acb9" href = "/listings">Search</IonButton>
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Landingpage;
