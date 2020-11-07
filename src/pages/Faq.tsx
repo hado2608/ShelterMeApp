@@ -1,8 +1,8 @@
 import React from 'react';
 import { IonButtons, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonMenuButton, IonPage, IonRow, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
-import './About.css';
+import './Faq.css';
 
-const About: React.FC = () => {
+const Faq: React.FC = () => {
     return(
         <IonPage>
             <IonHeader>
@@ -17,9 +17,9 @@ const About: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent color="thisapp">
-                <IonTitle class = 'title'>  About Us </IonTitle>
+                <IonTitle> Frequently Asked Questions </IonTitle>
             </IonContent>
         </IonPage>
     )
 }
-export default About
+export default Faq

@@ -18,25 +18,36 @@ const Reservation: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen color = "thisapp">
         <IonCard color = "dark" class = "reservation">
-          <IonCardHeader>
-            <IonCardTitle>Dorothy Day Center</IonCardTitle>
-            <IonCardSubtitle>
-            Address: 183 Old Sixth Street Saint Paul, MN 55102 <br></br>
-            Phone number: (651) 647-2350 <br></br>
-            Website: https://www.cctwincities.org/locations/   
-            </IonCardSubtitle>
+          <IonGrid>
+              <IonRow>
+                <IonCol><IonThumbnail class = "listing_img"><IonImg src = {"./assets/img/listingdemo.png"}></IonImg></IonThumbnail></IonCol>
+                <IonCol size = "9">
+                  <IonCardHeader>
+                  <IonHeader>
+                  <IonCardTitle class = "card_title">Dorothy Day Center </IonCardTitle>
+                  <IonCardSubtitle class = "card_info">
+                  Address: 183 Old Sixth Street Saint Paul, MN 55102 <br></br>
+                  Phone number: (651) 647-2350 <br></br>
+                  Website: https://www.cctwincities.org/locations/   
+                  </IonCardSubtitle>
+                  </IonHeader>
+                  </IonCardHeader>
+                </IonCol>
+            </IonRow>
+          </IonGrid>  
+
             <IonCardContent>
               <IonGrid>
                 <IonRow>Amenities</IonRow>
                 <IonRow>
                   <IonCol>Women only</IonCol>
-                  <IonCol>Mail facilities</IonCol>
+                  <IonCol size = "9"> Mail facilities</IonCol>
                 </IonRow>
               </IonGrid>
-              <IonButton color = "thisappblue" class = "button"> RESERVE A SPOT </IonButton>
             </IonCardContent>
-          </IonCardHeader>
+          
         </IonCard>
+        <IonButton color = "thisappblue" class = "button_reserve" href = "./info"> RESERVE A SPOT </IonButton>
       </IonContent>
     </IonPage>
   );

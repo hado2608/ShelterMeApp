@@ -9,16 +9,16 @@ const Landingpage: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar color = 'header' >
-          <IonThumbnail class="thumbnail" >
-            <IonImg src = {"./assets/img/logo.png"}></IonImg>
-          </IonThumbnail>
-          <IonTitle class = 'title'>Shelter.Me</IonTitle>
+            <IonThumbnail class="thumbnail" >
+              <IonImg src = {"./assets/img/logo.png"}></IonImg>
+            </IonThumbnail>
+            <IonTitle class = 'title'>Shelter.Me</IonTitle>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen color= "thisapp">
+      <IonContent fullscreen color= "thisapp" >
         <ExploreContainer name="Enter your zip code:" />
         <IonSearchbar color="white" class = 'center' value={searchText} onIonChange={e => setSearchText(e.detail.value!)} inputmode="numeric"></IonSearchbar>
         <IonButton id = "search_button" color = "#79acb9" href = "/listings">Search</IonButton>

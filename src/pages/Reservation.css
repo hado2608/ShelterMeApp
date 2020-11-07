@@ -5,6 +5,15 @@
     margin-left: 90px;
 }
 
-.button {
-    bottom: 10%;
+.card_title {
+    padding-bottom: 10px;
+}
+
+.card_info {
+    padding: 10px ;
+}
+
+.button_reserve {
+    margin-top: -110px;
+    margin-left: 1200px;
 }
