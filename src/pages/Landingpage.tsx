@@ -5,6 +5,7 @@ import './Landingpage.css';
 
 const Landingpage: React.FC = () => {
   const [searchText, setSearchText] = useState('');
+
   return (
     <IonPage>
       <IonHeader>
@@ -20,7 +21,8 @@ const Landingpage: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen color= "thisapp" >
         <ExploreContainer name="Enter your zip code:" />
-        <IonSearchbar color="white" class = 'center' value={searchText} onIonChange={e => setSearchText(e.detail.value!)} inputmode="numeric"></IonSearchbar>
+        <IonSearchbar color="white" class = 'center' value={searchText} onIonChange={e => setSearchText(e.detail.value!)} 
+        inputmode="numeric" type="number"></IonSearchbar>
         <IonButton id = "search_button" color = "#79acb9" href = "/listings">Search</IonButton>
       </IonContent>
     </IonPage>

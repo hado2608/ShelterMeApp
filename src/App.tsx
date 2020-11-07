@@ -20,6 +20,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Faq from './pages/Faq';
 import { Menu } from './components/Menu';
+import Login from './pages/Login';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -54,6 +55,7 @@ const App: React.FC = () => (
           <Route path="/about" component={About}/>
           <Route path="/contact" component={Contact}/>
           <Route path="/faq" component={Faq}/>
+          <Route path="/login" component={Login}/>
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color="header">
           <IonTabButton tab="about" href="/about">

@@ -27,10 +27,10 @@ export const Menu = () => {
                             <IonLabel>All Listings</IonLabel>
                         </IonItem>
                         <IonItem color = "thisapp"> 
-                            <IonLabel>About Us</IonLabel>
+                            <IonLabel>Log In </IonLabel>
                         </IonItem>
                         <IonItem color = "thisapp"> 
-                            <IonLabel>Contact</IonLabel>
+                            <IonLabel>Register</IonLabel>
                         </IonItem>
                     </IonMenuToggle>
                 </IonList>
