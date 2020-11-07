@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { IonButtons, IonButton, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonMenuButton, IonPage, IonRow, IonThumbnail, IonTitle, IonToolbar, IonInput, IonLabel } from '@ionic/react';
-import './Login.css';
+import { IonButtons, IonButton, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonMenuButton, IonPage, IonRow, IonThumbnail, IonTitle, IonToolbar, IonInput } from '@ionic/react';
+import './Register.css';
 import { Link } from 'react-router-dom';
 
-const Login: React.FC = () => {
+const Register: React.FC = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [cpassword, setCPassword] = useState('')
 
-    function loginUser() {
-        console.log(username,password)
+    function registerUser() {
+        console.log(username,password,cpassword)
     }
 
     return(
@@ -38,11 +39,17 @@ const Login: React.FC = () => {
                             <IonInput placeholder="Enter your password" type="password" onIonChange={(e : any) => setPassword(e.target.value)}></IonInput>
                         </IonCol>
                     </IonRow>
-                    <IonButton color = 'thisappblue' onClick={loginUser}>Login</IonButton>
-                    <p>Create new account: <Link to = "./register">Register</Link></p>
+                    <IonRow>
+                        <IonCol > Confirm password:</IonCol>
+                        <IonCol size = "9">
+                            <IonInput placeholder="Confirm your password" type="password" onIonChange={(e : any) => setCPassword(e.target.value)}></IonInput>
+                        </IonCol>
+                    </IonRow>
+                    <IonButton color = 'thisappblue' onClick={registerUser}>Register</IonButton>
+                    <p>Already have an account? <Link to="./login">Login</Link></p>
                 </IonGrid>
             </IonContent>
         </IonPage>
     )
 }
-export default Login
+export default Register
