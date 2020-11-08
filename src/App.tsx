@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
+  IonSpinner,
   IonTabBar,
   IonTabButton,
   IonTabs
@@ -22,6 +23,7 @@ import Faq from './pages/Faq';
 import { Menu } from './components/Menu';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -42,40 +44,67 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      < Menu/>
-      <IonTabs>
-        <IonRouterOutlet id="main">
-          <Route path="/" component={Landingpage} exact={true} />
-          <Route path="/listings" component={Listings} exact={true} />
-          <Route path="/reserve" component={Reservation} />
-          <Route path="/info" component={Info} />
-          <Route path="/confirm" component={Confirm} />
-          <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
-          <Route path="/faq" component={Faq}/>
-          <Route path="/login" component={Login}/>
-          <Route path="/register" component={Register}/>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom" color="header">
-          <IonTabButton tab="about" href="/about">
-            <IonIcon icon={triangle} />
-            <IonLabel>About Us</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="faq" href="/faq">
-            <IonIcon icon={ellipse} />
-            <IonLabel>FAQ</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="contact" href="/contact">
-            <IonIcon icon={square} />
-            <IonLabel>Contact Us </IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+/* Configuration */
+import { getCurrentUser, logoutUser } from './firebaseConfig';
+import { useDispatch } from 'react-redux';
+import { setUserState } from './redux/actions';
+import { prototype } from 'events';
 
+const RoutingSystem: React.FC = () => {
+  return(
+    <IonReactRouter>
+    < Menu/>
+    <IonTabs>
+      <IonRouterOutlet id="main">
+        <Route path="/" component={Landingpage} exact={true} />
+        <Route path="/listings" component={Listings} exact={true} />
+        <Route path="/reserve" component={Reservation} exact = {true}/>
+        <Route path="/info" component={Info} />
+        <Route path="/confirm" component={Confirm} />
+        <Route path="/about" component={About}/>
+        <Route path="/contact" component={Contact}/>
+        <Route path="/faq" component={Faq}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/register" component={Register}/>
+        <Route path="/dashboard" component={Dashboard}/>
+      </IonRouterOutlet>
+      <IonTabBar slot="bottom" color="header">
+        <IonTabButton tab="about" href="/about">
+          <IonIcon icon={triangle} />
+          <IonLabel>About Us</IonLabel>
+        </IonTabButton>
+        <IonTabButton tab="faq" href="/faq">
+          <IonIcon icon={ellipse} />
+          <IonLabel>FAQ</IonLabel>
+        </IonTabButton>
+        <IonTabButton tab="contact" href="/contact">
+          <IonIcon icon={square} />
+          <IonLabel>Contact Us </IonLabel>
+        </IonTabButton>
+      </IonTabBar>
+    </IonTabs>
+  </IonReactRouter>
+  )
+}
+
+const App: React.FC = () => {
+  const [busy, setBusy] = useState(true)
+  const dispatch = useDispatch()
+  
+  
+  useEffect (() => {
+    getCurrentUser().then((user: any) => {
+      if(user) {
+        dispatch(setUserState(user.email))
+        window.history.pushState( {}, "", '/dashboard')
+      // } else {
+      //   window.history.pushState( null, '', "/")
+       
+      }
+      setBusy(false)
+    })
+  },[])
+
+  return <IonApp>{busy ? <IonSpinner /> : <RoutingSystem/>}</IonApp>
+}
 export default App;

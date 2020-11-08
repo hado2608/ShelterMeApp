@@ -1,15 +1,33 @@
 import React, { useState } from 'react';
-import { IonButtons, IonButton, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonMenuButton, IonPage, IonRow, IonThumbnail, IonTitle, IonToolbar, IonInput } from '@ionic/react';
+import { IonButtons, IonButton, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonMenuButton, IonPage, IonRow, IonThumbnail, IonTitle, IonToolbar, IonInput, IonLoading } from '@ionic/react';
 import './Register.css';
 import { Link } from 'react-router-dom';
+import { toast } from '../toast';
+import {registerUser} from '../firebaseConfig';
 
 const Register: React.FC = () => {
+    const [busy, setBusy] = useState<boolean>(false)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [cpassword, setCPassword] = useState('')
 
-    function registerUser() {
-        console.log(username,password,cpassword)
+    async function register() {
+        setBusy(true)
+        if (password !== cpassword) {
+            return toast("Passwords do not match", 2000)
+        }
+        if (username.trim() === '' || password.trim() === '') {
+            return toast("Username and password are required", 2000)
+        }
+        
+        const res = await registerUser(username, password)
+        if (res) {
+        //     return toast('Password must be more than 6 characters', 2000)
+        // } else {
+            return toast('You have succesfully registered', 4000)
+        }
+        setBusy(false)
+        
     }
 
     return(
@@ -26,6 +44,7 @@ const Register: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent color="thisapp">
+            <IonLoading message="Registering..." duration={0} isOpen={busy}></IonLoading>
                 <IonGrid class = "login_position">
                     <IonRow>
                         <IonCol>Username:</IonCol>
@@ -45,7 +64,9 @@ const Register: React.FC = () => {
                             <IonInput placeholder="Confirm your password" type="password" onIonChange={(e : any) => setCPassword(e.target.value)}></IonInput>
                         </IonCol>
                     </IonRow>
-                    <IonButton color = 'thisappblue' onClick={registerUser}>Register</IonButton>
+                    <IonButton color = 'thisappblue' onClick={register}>Register</IonButton>
+                    
+
                     <p>Already have an account? <Link to="./login">Login</Link></p>
                 </IonGrid>
             </IonContent>

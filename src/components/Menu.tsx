@@ -26,7 +26,7 @@ export const Menu = () => {
                         <IonItem button routerLink={"./listings"}  routerDirection="none" color = "thisapp">
                             <IonLabel>All Listings</IonLabel>
                         </IonItem>
-                        <IonItem color = "thisapp"> 
+                        <IonItem button routerLink={"./login"} color = "thisapp"> 
                             <IonLabel>Log In </IonLabel>
                         </IonItem>
                         <IonItem color = "thisapp"> 

@@ -1,0 +1,30 @@
+.title {
+    padding: 15px;
+    padding-left: 10px;
+    margin-top: -50px;
+    margin-left: 50px;
+    color: white;
+    font: Montserrat;
+}
+
+.thumbnail {
+    margin-top: 10px;
+}
+
+
+:root {
+--ion-color-thisapp: #d6ead7;
+--ion-color-thisapp-rgb: 214,234,215;
+--ion-color-thisapp-contrast: #000000;
+--ion-color-thisapp-contrast-rgb: 0,0,0;
+--ion-color-thisapp-shade: #bccebd;
+--ion-color-thisapp-tint: #daecdb;
+}
+.ion-color-thisapp {
+--ion-color-base: var(--ion-color-thisapp);
+--ion-color-base-rgb: var(--ion-color-thisapp-rgb);
+--ion-color-contrast: var(--ion-color-thisapp-contrast);
+--ion-color-contrast-rgb: var(--ion-color-thisapp-contrast-rgb);
+--ion-color-shade: var(--ion-color-thisapp-shade);
+--ion-color-tint: var(--ion-color-thisapp-tint);
+}
