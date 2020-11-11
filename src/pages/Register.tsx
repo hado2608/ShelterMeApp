@@ -14,17 +14,17 @@ const Register: React.FC = () => {
     async function register() {
         setBusy(true)
         if (password !== cpassword) {
-            return toast("Passwords do not match", 2000)
+            toast("Passwords do not match", 2000)
         }
         if (username.trim() === '' || password.trim() === '') {
-            return toast("Username and password are required", 2000)
+            toast("Username and password are required", 2000)
         }
         
         const res = await registerUser(username, password)
         if (res) {
         //     return toast('Password must be more than 6 characters', 2000)
         // } else {
-            return toast('You have succesfully registered', 4000)
+            toast('You have succesfully registered', 4000)
         }
         setBusy(false)
         

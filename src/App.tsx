@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, useLocation } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
@@ -48,7 +48,6 @@ import './theme/variables.css';
 import { getCurrentUser, logoutUser } from './firebaseConfig';
 import { useDispatch } from 'react-redux';
 import { setUserState } from './redux/actions';
-import { prototype } from 'events';
 
 const RoutingSystem: React.FC = () => {
   return(
@@ -91,18 +90,17 @@ const App: React.FC = () => {
   const [busy, setBusy] = useState(true)
   const dispatch = useDispatch()
   
-  
   useEffect (() => {
-    getCurrentUser().then((user: any) => {
-      if(user) {
-        dispatch(setUserState(user.email))
-        window.history.pushState( {}, "", '/dashboard')
-      // } else {
-      //   window.history.pushState( null, '', "/")
-       
-      }
-      setBusy(false)
-    })
+      getCurrentUser().then((user: any) => {
+        // if(user) {
+        //dispatch(setUserState(user.email))
+        //   window.history.replaceState( {}, '', '/dashboard')
+        // // } else {
+        // //   window.history.pushState({}, '', '/')
+        // // } 
+        // }
+        setBusy(false)
+      })
   },[])
 
   return <IonApp>{busy ? <IonSpinner /> : <RoutingSystem/>}</IonApp>

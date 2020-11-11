@@ -18,6 +18,7 @@ const Faq: React.FC = () => {
             </IonHeader>
             <IonContent color="thisapp">
                 <IonTitle> Frequently Asked Questions </IonTitle>
+                <p> </p>
             </IonContent>
         </IonPage>
     )
