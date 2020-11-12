@@ -1,0 +1,16 @@
+#register_title {
+    padding: 40px;
+    margin-left: 40px;
+    color: #659157;
+    font-family: Montserrat;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.register_button {
+    margin-left: 150px;
+}
+
+#link-to-login {
+    margin-left: 200px;
+}

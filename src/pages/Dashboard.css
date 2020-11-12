@@ -1,30 +1,30 @@
 .title {
-    padding: 15px;
-    padding-left: 10px;
-    margin-top: -50px;
-    margin-left: 50px;
-    color: white;
     font: Montserrat;
+    font-weight: 300;
+    font-size: x-large;
+    margin-top: 0px;
 }
 
 .thumbnail {
     margin-top: 10px;
 }
 
-
-:root {
---ion-color-thisapp: #d6ead7;
---ion-color-thisapp-rgb: 214,234,215;
---ion-color-thisapp-contrast: #000000;
---ion-color-thisapp-contrast-rgb: 0,0,0;
---ion-color-thisapp-shade: #bccebd;
---ion-color-thisapp-tint: #daecdb;
+#home-page {
+    text-decoration: none;
 }
-.ion-color-thisapp {
---ion-color-base: var(--ion-color-thisapp);
---ion-color-base-rgb: var(--ion-color-thisapp-rgb);
---ion-color-contrast: var(--ion-color-thisapp-contrast);
---ion-color-contrast-rgb: var(--ion-color-thisapp-contrast-rgb);
---ion-color-shade: var(--ion-color-thisapp-shade);
---ion-color-tint: var(--ion-color-thisapp-tint);
+
+.button-out {
+    margin-top: 300px;
+}
+
+#not-register {
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 200px;
+}
+
+#back-button {
+    margin-left: 650px;
 }

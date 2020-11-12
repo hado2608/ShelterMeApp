@@ -2,6 +2,7 @@ import React from 'react';
 import { IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonImg, IonItem, IonLabel, IonList, IonListHeader, IonMenuButton, IonPage, IonRow, IonTextarea, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
 import { listingData} from '../components/listingData';
 import './Listings.css';
+import { Link } from 'react-router-dom';
 
 
 const Listings: React.FC = () => {
@@ -11,10 +12,12 @@ const Listings: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar color = 'header'>
+        <Link to='./' id="home-page">
           <IonThumbnail class="thumnail">
             <IonImg src = {"./assets/img/logo.png"}></IonImg>
           </IonThumbnail>
-          <IonTitle class = 'title' >Shelter.Me</IonTitle>
+          <IonTitle class = 'title-home' >Shelter.Me</IonTitle>
+          </Link>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>

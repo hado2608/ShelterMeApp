@@ -10,9 +10,33 @@ import {
     IonLabel,
 } from '@ionic/react';
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
+import { getCurrentUser, logoutUser } from '../firebaseConfig';
+import { setUserState } from '../redux/actions';
 import './Menu.css';
 export const Menu = () => {
+
+    const username = useSelector((state: any) => state.user.username)
+    const history = useHistory()
+    const [busy, setBusy] = useState(true)
+    const dispatch = useDispatch()
+
+    useEffect (() => {
+        getCurrentUser().then((user: any) => {
+            if(user) {
+                dispatch(setUserState(user.email))
+            } 
+        })
+    })
+
+    async function logout() {
+        setBusy(true)
+        await logoutUser()
+        setBusy(false)
+        history.replace('/')
+    }
     return (
         <IonMenu side="start" contentId ="main">
             <IonHeader>
@@ -21,17 +45,33 @@ export const Menu = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent color = "thisapp">
-                <IonList>
+                <IonList color = "thisapp">
                     <IonMenuToggle auto-hide ="false" color = "thisapp">
                         <IonItem button routerLink={"./listings"}  routerDirection="none" color = "thisapp">
                             <IonLabel>All Listings</IonLabel>
                         </IonItem>
-                        <IonItem button routerLink={"./login"} color = "thisapp"> 
-                            <IonLabel>Log In </IonLabel>
+                        {username ?
+                        
+                        <IonItem button routerLink={"./"} color = "thisapp"> 
+                        <IonLabel>Your Listings </IonLabel>
                         </IonItem>
+                        :
+                        <IonItem button routerLink={"./login"} color = "thisapp"> 
+                            <IonLabel>Login </IonLabel>
+                        </IonItem>
+                        
+                        }
+                        {username ? 
+                        <IonItem button routerLink={"./"} color = "thisapp"> 
+                        <IonLabel onClick= {logout}>Logout</IonLabel>
+                        </IonItem>
+
+                        : 
+
                         <IonItem button routerLink={"./register"} color = "thisapp"> 
                             <IonLabel >Register</IonLabel>
-                        </IonItem>
+                        </IonItem>}
+                        
                     </IonMenuToggle>
                 </IonList>
             </IonContent>
