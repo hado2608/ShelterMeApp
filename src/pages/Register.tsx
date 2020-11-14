@@ -48,7 +48,7 @@ const Register: React.FC = () => {
             <IonLoading message="Registering..." duration={0} isOpen={busy}></IonLoading>
             <IonContent color="thisapp">
                 <IonGrid class = "login_position">
-                    <IonRow><IonTitle id = 'register_title' > REGISTER PAGE</IonTitle></IonRow>
+                    <IonRow><IonTitle id = 'register_title' > CREATE AN ACCOUNT</IonTitle></IonRow>
                     <IonRow>
                         <IonCol>Username:</IonCol>
                         <IonCol size = "9">

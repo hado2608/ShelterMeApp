@@ -17,3 +17,9 @@ ion-title.aboutus {
     font-family: Montserrat;
     color: white;
 }
+
+.aboutus-content {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: grey;
+}
