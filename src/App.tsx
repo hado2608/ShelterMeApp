@@ -21,6 +21,8 @@ import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Landingpage from './pages/Landingpage';
 import Listings from './pages/Listings';
+import Listings1 from './pages/Listings1';
+import Listings2 from './pages/Listings2';
 import ZipListings from './pages/ZipListings';
 import Reservation1 from './pages/Reservation1';
 import Reservation2 from './pages/Reservation2';
@@ -66,6 +68,8 @@ const RoutingSystem: React.FC = () => {
       <IonRouterOutlet id="main">
         <Route path="/" component={Landingpage} exact={true} />
         <Route path="/all-listings" component={Listings} exact={true} />
+        <Route path="/filter?=women-only" component={Listings1} exact={true} />
+        <Route path="/filter?=meals-provided" component={Listings2} exact={true} />
         <Route path="/search-results" component={ZipListings} exact={true} />
         <Route path="/reserve-dorothy-day-center" component={Reservation1} exact = {true}/>
         <Route path="/reserve-naomi-family-residence" component={Reservation2} exact = {true}/>
