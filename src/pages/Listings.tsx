@@ -23,7 +23,7 @@ const Listings: React.FC = () => {
 
       <IonContent fullscreen color= "thisapp">
 
-        <IonCard color = "dark" class="ion-card" className="ion-activated" href="./reserve-naomi-family-residence">
+        <IonCard color = "dark" class="ion-card" className="ion-activated" href="./reserve-dorothy-day-center">
           <IonGrid>
             <IonRow>
               <IonCol>
