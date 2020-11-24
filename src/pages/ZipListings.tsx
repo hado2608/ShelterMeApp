@@ -1,3 +1,10 @@
+/*
+ * 
+ * listings with zip code == 55101
+ * 
+ * 
+*/
+
 import React from 'react';
 import { IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonImg, IonItem, IonLabel, IonList, IonListHeader, IonMenuButton, IonPage, IonRow, IonTextarea, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
 import { listingData} from '../components/listingData';
