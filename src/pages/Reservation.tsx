@@ -24,11 +24,11 @@ const Reservation: React.FC = () => {
                 <IonCol size = "9">
                   <IonCardHeader>
                   <IonHeader>
-                  <IonCardTitle class = "card_title">Dorothy Day Center </IonCardTitle>
+                  <IonCardTitle class = "card_title">Naomi Family Residence </IonCardTitle>
                   <IonCardSubtitle class = "card_info">
-                  Address: 183 Old Sixth Street Saint Paul, MN 55102 <br></br>
-                  Phone number: (651) 647-2350 <br></br>
-                  Website: https://www.cctwincities.org/locations/   
+                  Address: 77 E 9th Street St. Paul, MN 55101 <br></br>
+                  Phone number: (651) 228-1800 <br></br>
+                  Website: https://www.ugmtc.org   
                   </IonCardSubtitle>
                   </IonHeader>
                   </IonCardHeader>
@@ -38,7 +38,7 @@ const Reservation: React.FC = () => {
 
             <IonCardContent>
               <IonGrid>
-                <IonRow>Amenities</IonRow>
+                <IonRow>Amenities: </IonRow>
                 <IonRow>
                   <IonCol>Women only</IonCol>
                   <IonCol size = "9"> Mail facilities</IonCol>
