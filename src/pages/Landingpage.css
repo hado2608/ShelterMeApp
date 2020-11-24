@@ -12,6 +12,18 @@
     color: #79acb9 !important;
   }
 
+.buttons {
+    font-size: 12px;
+    text-transform: none;
+    text-align: center;
+  }
+
+.amenities {
+    font-size: 16px;
+    text-transform: none;
+    text-align: center;
+  }
+
 .title {
     padding: 15px;
     padding-left: 10px;
