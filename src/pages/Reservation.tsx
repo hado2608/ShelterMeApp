@@ -40,8 +40,22 @@ const Reservation: React.FC = () => {
               <IonGrid>
                 <IonRow>Amenities: </IonRow>
                 <IonRow>
-                  <IonCol>Women only</IonCol>
-                  <IonCol size = "9"> Mail facilities</IonCol>
+                  <IonCol>Women and children only</IonCol>
+                </IonRow>
+                <IonRow>
+                  <IonCol size = "9">Addiction and rehabilitation support</IonCol>
+                </IonRow>
+                <IonRow>
+                  <IonCol size = "9">Education resources</IonCol>
+                </IonRow>
+                <IonRow>
+                  <IonCol size = "9">Meals provided</IonCol>
+                </IonRow>
+                <IonRow>
+                  <IonCol size = "9">Medical care available</IonCol>
+                </IonRow>
+                <IonRow>
+                  <IonCol size = "9">Religious affiliation</IonCol>
                 </IonRow>
               </IonGrid>
             </IonCardContent>
