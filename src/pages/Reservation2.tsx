@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { IonButtons, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonMenuButton, IonPage, IonRow, IonThumbnail, IonTitle, IonToolbar } from '@ionic/react';
-import './Reservation2.css';
+import './Reservation.css';
 
 const Reservation2: React.FC = () => {
   return (
