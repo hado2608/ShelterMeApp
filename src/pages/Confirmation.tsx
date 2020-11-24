@@ -20,7 +20,7 @@ const Confirm: React.FC = () => {
             <IonCard class = "reservation">
                 <IonLabel id = "confirm_message"> Your reservation has been submitted to: </IonLabel>
                 <br></br>
-                <IonLabel id = "confirm_place" color="light"> Dorothy Day Center</IonLabel>
+                <IonLabel id = "confirm_place" color="light">Dorothy Day Center</IonLabel>
                 <IonIcon name = "checkmark-circle-outline"></IonIcon>
         
                 
