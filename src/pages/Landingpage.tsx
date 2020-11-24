@@ -31,10 +31,10 @@ const Landingpage: React.FC = () => {
           <IonGrid>
             <IonRow>
               <IonCol>
-                <IonButton class = 'buttons' color="light" href = "/filter?=women-only">Women only</IonButton>
+                <IonButton class = 'buttons' color="light">Women only</IonButton>
               </IonCol>
               <IonCol>
-                <IonButton class = 'buttons' color="light" href = "/filter?=meals-provided">Meals provided</IonButton>
+                <IonButton class = 'buttons' color="light">Meals provided</IonButton>
               </IonCol>
               <IonCol>
                 <IonButton class = 'buttons' color="light">Shower facilities</IonButton>
@@ -63,7 +63,7 @@ const Landingpage: React.FC = () => {
                 <IonButton class = 'buttons' color="light">Mental health services</IonButton>
               </IonCol>
               <IonCol>
-                <IonButton class = 'buttons' color="light">Education resources</IonButton>
+                <IonButton class = 'buttons' color="light" href = "/education-resources">Education resources</IonButton>
               </IonCol>
               <IonCol>
                 <IonButton class = 'buttons' color="light">Day shelter only</IonButton>
@@ -95,7 +95,7 @@ const Landingpage: React.FC = () => {
                 <IonButton class = 'buttons' color="light">Long-term care</IonButton>
               </IonCol>
               <IonCol>
-                <IonButton class = 'buttons' color="light">Felons allowed</IonButton>
+                <IonButton class = 'buttons' color="light" href = "/felons-allowed">Felons allowed</IonButton>
               </IonCol>
               <IonCol>
                 <IonButton class = 'buttons' color="light">Job training available</IonButton>
