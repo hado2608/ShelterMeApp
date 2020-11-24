@@ -33,8 +33,12 @@
     font: Montserrat;
 }
 
-.thumbnail {
+#thumbnail {
   margin-top: 10px;
+}
+
+#home-link {
+  text-decoration: none;
 }
 
 :root {

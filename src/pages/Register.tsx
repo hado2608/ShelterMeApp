@@ -34,18 +34,21 @@ const Register: React.FC = () => {
         <IonPage>
             <IonHeader>
                 <IonToolbar color = 'header'>
+                <Link to='./' id="home-page">
                 <IonThumbnail class="thumnail">
                     <IonImg src = {"./assets/img/logo.png"}></IonImg>
                 </IonThumbnail>
-                <IonTitle class = 'title' >Shelter.Me</IonTitle>
+                <IonTitle class = 'title-home' >Shelter.Me</IonTitle>
+                </Link>
                 <IonButtons slot="start">
                     <IonMenuButton />
                 </IonButtons>
                 </IonToolbar>
             </IonHeader>
-            <IonContent color="thisapp">
             <IonLoading message="Registering..." duration={0} isOpen={busy}></IonLoading>
+            <IonContent color="thisapp">
                 <IonGrid class = "login_position">
+                    <IonRow><IonTitle id = 'register_title' > CREATE AN ACCOUNT</IonTitle></IonRow>
                     <IonRow>
                         <IonCol>Username:</IonCol>
                         <IonCol size = "9">

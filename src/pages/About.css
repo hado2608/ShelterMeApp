@@ -1,11 +1,12 @@
-#aboutus {
+ion-title.aboutus {
     padding-bottom: 30px;
-    margin-top: 50px;
+    margin-top: 0px;
     text-align: center;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: xxx-large;
     font-family: Montserrat;
     color: #659157;
+    background-color: lightgoldenrodyellow;
 }
 
 .mission {
@@ -15,4 +16,10 @@
     font-size: xx-large;
     font-family: Montserrat;
     color: white;
+}
+
+.aboutus-content {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: grey;
 }
