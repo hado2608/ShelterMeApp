@@ -24,8 +24,7 @@ const Landingpage: React.FC = () => {
         <IonSearchbar color="white" class = 'center' value={searchText} onIonChange={e => setSearchText(e.detail.value!)} 
         inputmode="numeric" type="number"></IonSearchbar>
         <IonButton id = "search_button" color = "#79acb9" href = "/search-results">Search</IonButton>
-      {/* </IonContent>
-      <IonContent> */}
+      
         <IonCard color = 'header'>
           <IonHeader class = 'amenities' color = 'header'><br></br>Or, select an amenity:<br></br><br></br></IonHeader>
           <IonGrid>
