@@ -57,7 +57,7 @@ const Login: React.FC = () => {
                         </IonCol>
                     </IonRow>
                     <IonButton color = 'thisappblue' onClick={login}>Login</IonButton>
-                    <p>Create new account: <Link to = "./register">Register</Link></p>
+                    <p>Don't have an account yet?<Link to = "./register">Register here</Link></p>
                 </IonGrid>
             </IonContent>
         </IonPage>

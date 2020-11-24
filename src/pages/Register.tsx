@@ -67,7 +67,7 @@ const Register: React.FC = () => {
                     <IonButton color = 'thisappblue' onClick={register}>Register</IonButton>
                     
 
-                    <p>Already have an account? <Link to="./login">Login</Link></p>
+                    <p>Already have an account? <Link to="./login">Login here</Link></p>
                 </IonGrid>
             </IonContent>
         </IonPage>
