@@ -25,49 +25,50 @@ const Reservation2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen color = "thisapp">
-        <IonCard color = "dark" class = "reservation">
+         <IonCard color = "dark" class = "reservation">
           <IonGrid>
-              <IonRow>
-                <IonCol><IonThumbnail class = "listing_img"><IonImg src = {"./assets/img/listingdemo.png"}></IonImg></IonThumbnail></IonCol>
-                <IonCol size = "9">
-                  <IonCardHeader>
+            <IonRow>
+              <IonCol>
+                <IonThumbnail class = "listing_img"><IonImg src = {"./assets/img/listingdemo.png"}></IonImg></IonThumbnail>
+              </IonCol>
+              <IonCol size = "9">
+                <IonCardHeader>
                   <IonHeader>
-                  <IonCardTitle class = "card_title">Naomi Family Residence </IonCardTitle>
-                  <IonCardSubtitle class = "card_info">
-                  Address: 77 E 9th Street St. Paul, MN 55101 <br></br>
-                  Phone number: (651) 228-1800 <br></br>
-                  Website: https://www.ugmtc.org   
-                  </IonCardSubtitle>
+                    <IonCardTitle class = "card_title">Naomi Family Residence </IonCardTitle>
+                    <IonCardSubtitle class = "card_info">
+                      Address: 77 E 9th Street St. Paul, MN 55101 <br></br>
+                      Phone number: (651) 228-1800 <br></br>
+                      Website: https://www.ugmtc.org   
+                    </IonCardSubtitle>
                   </IonHeader>
-                  </IonCardHeader>
-                </IonCol>
+                </IonCardHeader>
+              </IonCol>
             </IonRow>
           </IonGrid>  
 
-            <IonCardContent>
-              <IonGrid>
-                <IonRow>Amenities: </IonRow>
-                <IonRow>
-                  <IonCol>Women and children only</IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol size = "9">Addiction and rehabilitation support</IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol size = "9">Education resources</IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol size = "9">Meals provided</IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol size = "9">Medical care available</IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol size = "9">Religious affiliation</IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonCardContent>
-          
+          <IonCardContent>
+            <IonGrid>
+              <IonRow>Amenities: </IonRow>
+              <IonRow>
+                <IonCol size = "9">Women and children only</IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol size = "9">Addiction and rehabilitation support</IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol size = "9">Education resources</IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol size = "9">Meals provided</IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol size = "9">Medical care available</IonCol>
+              </IonRow>
+              <IonRow>
+                <IonCol size = "9">Religious affiliation</IonCol>
+              </IonRow>
+            </IonGrid>
+          </IonCardContent>
         </IonCard>
         <IonButton color = "thisappblue" class = "button_reserve" href = "./info"> RESERVE A SPOT </IonButton>
       </IonContent>
