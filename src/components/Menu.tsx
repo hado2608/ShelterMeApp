@@ -23,8 +23,11 @@ export const Menu = () => {
             <IonContent color = "thisapp">
                 <IonList>
                     <IonMenuToggle auto-hide ="false" color = "thisapp">
+                    <IonItem button routerLink={"./"}  routerDirection="none" color = "thisapp">
+                            <IonLabel>Home</IonLabel>
+                        </IonItem>
                         <IonItem button routerLink={"./listings"}  routerDirection="none" color = "thisapp">
-                            <IonLabel>All Listings</IonLabel>
+                            <IonLabel>View All Listings</IonLabel>
                         </IonItem>
                         <IonItem button routerLink={"./login"} color = "thisapp"> 
                             <IonLabel>Log In </IonLabel>
