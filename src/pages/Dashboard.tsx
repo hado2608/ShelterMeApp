@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { IonButtons, IonButton, IonContent, IonHeader, IonImg, IonMenuButton, IonPage, IonThumbnail, IonTitle, IonToolbar, IonLoading } from '@ionic/react';
+import { IonButtons, IonButton, IonContent, IonHeader, IonImg, IonMenuButton, IonPage, IonThumbnail, IonTitle, IonToolbar, IonLoading, IonCard, IonGrid, IonCardHeader, IonCardTitle, IonCol, IonRow } from '@ionic/react';
 import { useSelector } from 'react-redux';
 import { getCurrentUser, logoutUser} from '../firebaseConfig';
 import { useHistory } from 'react-router';
@@ -48,14 +48,19 @@ const Dashboard: React.FC = () => {
             </IonHeader>
             
             <IonContent color="thisapp">
-                
-                <p>  Hello {username} </p>
-                <IonButton routerLink="./listings"></IonButton>
+                <IonCard class="ion-card" className="ion-activated">
+                    <IonCardHeader>
+                        <IonHeader>
+                            <IonCardTitle class = "card_title" ><br></br> Hello {username} <br></br> <br></br></IonCardTitle>
+                        </IonHeader>
+                    </IonCardHeader>
+                <IonButton routerLink="./" color = 'header'> Home</IonButton>
+                <IonButton routerLink="./all-listings" color = 'header'> View all listings</IonButton>
                 {username? 
-                <IonButton onClick={logout}> Logout</IonButton> : 
+                <IonButton onClick={logout} color = 'header'> Logout</IonButton> : 
                 <IonButton routerLink= "./"> Back to home</IonButton>}
                 
-                
+                </IonCard>
             </IonContent>
         </IonPage>
     )
