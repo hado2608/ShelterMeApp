@@ -1,3 +1,10 @@
+/*
+ * 
+ * 
+ * 
+ * 
+*/
+
 import React, { useEffect, useState } from 'react';
 import { Route, useLocation } from 'react-router-dom';
 import {
@@ -15,6 +22,7 @@ import { ellipse, square, triangle } from 'ionicons/icons';
 import Landingpage from './pages/Landingpage';
 import Listings from './pages/Listings';
 import ZipListings from './pages/ZipListings';
+import Reservation1 from './pages/Reservation1';
 import Reservation2 from './pages/Reservation2';
 import Info from './pages/Information';
 import Confirm from './pages/Confirmation';
@@ -59,6 +67,7 @@ const RoutingSystem: React.FC = () => {
         <Route path="/" component={Landingpage} exact={true} />
         <Route path="/all-listings" component={Listings} exact={true} />
         <Route path="/search-results" component={ZipListings} exact={true} />
+        <Route path="/reserve-dorothy-day-center" component={Reservation1} exact = {true}/>
         <Route path="/reserve-naomi-family-residence" component={Reservation2} exact = {true}/>
         <Route path="/info" component={Info} />
         <Route path="/confirm" component={Confirm} />
