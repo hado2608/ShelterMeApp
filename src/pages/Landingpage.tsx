@@ -23,7 +23,7 @@ const Landingpage: React.FC = () => {
         <ExploreContainer name="Enter your zip code:" />
         <IonSearchbar color="white" class = 'center' value={searchText} onIonChange={e => setSearchText(e.detail.value!)} 
         inputmode="numeric" type="number"></IonSearchbar>
-        <IonButton id = "search_button" color = "#79acb9" href = "/listings">Search</IonButton>
+        <IonButton id = "search_button" color = "#79acb9" href = "/search-results">Search</IonButton>
       </IonContent>
     </IonPage>
   );
