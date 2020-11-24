@@ -1,0 +1,19 @@
+.reservation {
+    width: 90%;
+    height: 90%;
+    margin-top: 30px;
+    margin-left: 90px;
+}
+
+.card_title {
+    padding-bottom: 10px;
+}
+
+.card_info {
+    padding: 10px ;
+}
+
+.button_reserve {
+    margin-top: -110px;
+    margin-left: 1200px;
+}
